@@ -31,21 +31,20 @@ let item = '';
 let thumb = '';
 let active = 1;
 
-for (let key in items) {
+for (let i = 0; i < items.length; i++) {
     item += `
         <div class="item">
-            <img src="${items['photo']}" alt="">
+            <img src="${items[i].photo}" alt="">
             <div class="text">
-                <h3>${items['title']}</h3>
-                <p>${items['text']}</p>
+                <h3>${items[i].title}</h3>
+                <p>${items[i].text}</p>
             </div>
         </div>`
     thumb += `
         <div class="thumb">
-            <img src="${items['photo']}" alt="">
+            <img src="${items[i].photo}" alt="">
         </div>
     `
-    
 }
 
 itemsRef.innerHTML = item;
